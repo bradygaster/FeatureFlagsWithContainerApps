@@ -12,7 +12,7 @@ builder.Configuration.AddAzureAppConfiguration(options =>
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddFeatureManagement();
-
+builder.Services.AddWebApplicationMonitoring();
 
 var app = builder.Build();
 
