@@ -5,10 +5,10 @@ param configStoreName string = 'appconfig${uniqueString(resourceGroup().id)}'
 param location string = resourceGroup().location
 
 @description('Specifies the key of the feature flag.')
-param featureFlagKey string = 'Beta'
+param featureFlagKey string
 
 @description('Specifies the label of the feature flag. The label is optional and can be left as empty.')
-param featureFlagLabelEnabled string = 'BetaEnabled'
+param featureFlagLabelEnabled string
 
 var featureFlagValue = {
   id: featureFlagKey

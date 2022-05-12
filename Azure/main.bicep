@@ -25,6 +25,8 @@ module appConfig 'app_config.bicep' ={
   name: 'appConfiguration'
   params: {
     location: location
+    featureFlagKey: 'Beta'
+    featureFlagLabelEnabled: 'BetaEnabled'
   }
 }
 
@@ -45,6 +47,10 @@ var shared_config = [
   {
     name: 'AzureAppConfig'
     value: appConfig.outputs.appConfigConnectionString
+  }
+  {
+    name: 'RevisionLabel'
+    value: 'BetaDisabled'
   }
 ]
 
