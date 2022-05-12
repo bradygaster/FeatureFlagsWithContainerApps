@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.ApplicationInsights
+@inject TelemetryClient _telemetryClient
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,7 +26,10 @@
                         </li>
                         <feature name="Beta">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Beta</a>
+                                @{
+                                    _telemetryClient.TrackEvent("Beta Menu Shown");
+                                }
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Beta" asp-action="Index">Beta</a>
                             </li>
                         </feature>
                         <li class="nav-item">
