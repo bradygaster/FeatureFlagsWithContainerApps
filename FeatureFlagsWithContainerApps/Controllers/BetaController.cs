@@ -16,7 +16,7 @@ namespace TestFeatureFlags.Controllers
             _telemetryClient = telemetryClient;
         }
 
-        [FeatureGate(MyFeatureFlags.Beta)]
+        //[FeatureGate(MyFeatureFlags.Beta)]
         public IActionResult Index()
         {
             _telemetryClient.TrackEvent("Beta Page Loaded");
