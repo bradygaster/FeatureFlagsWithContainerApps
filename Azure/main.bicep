@@ -49,10 +49,10 @@ var shared_config = [
 ]
 
 // create the service container app
-module service 'container_app.bicep' = {
-  name: 'service'
+module frontend 'container_app.bicep' = {
+  name: 'frontend'
   params: {
-    name: 'service'
+    name: 'frontend'
     location: location
     registryPassword: acr.listCredentials().passwords[0].value
     registryUsername: acr.listCredentials().username
